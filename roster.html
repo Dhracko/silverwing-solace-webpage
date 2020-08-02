@@ -54,54 +54,28 @@
 			<div class="col-xl-2 gradient-right"></div>
 			<div class="col-sm-12 col-md-12 col-xl-8">
 
-<!-- Role Information-->
-				<div id="role" class="row middle" >
+<!-- Roster Information-->
+				
+                    <div class="col middle">
+                        <h1>Guild Roster</h1>
+                    </div>
                     <div class="col">
-                        <h1>Different class Roles within the Guild</h1>
+						<table class="table table-bordered">
+							<thead class="thread-dark">
+								<tr>
+									<th>Character Name</th>
+									<th>Level</th>
+									<th>Role</th>
+									<th>Rank</th>
+								</tr>
+							</thead>
+                            <tbody>
+                            
+                            </tbody>
+						
+						</table>
                     </div>
-                    <div class="row">
-                            <div class="col-sm-12 col-md-auto col-lg role-descrp">
-                                <h2>Tanks</h2>
-                                <p class="middle">Tanks characters distract enemy attention and attacks toward themselves in order to provide
-                                    protection or
-                                    decoy for teammates.</p>
-                                <div class="container">
-                                    <a href="#map" class="buttonrl" id="tnkbtn" title="Guild Tank locations">Click Here for locations</a>
-                                </div>
-                                <div class="col">
-                                    <h3>Tank Members</h3>
-                                    <div id="tank"></div>
-                                </div>
-                            </div>
-                        
-                            <div class="col-sm-12 col-md-auto col-lg role-descrp">
-                                <h2>Healers</h2>
-                                <p class="middle">Healers characters are those whose main mission is to "heal" other characters keeping them from defeat. They can also do damage, risen the opportunity.<br></p>
-                                <div class="container">
-                                    <a href="#map" class="buttonrl" id="healerrl" title="Guild Healers locations">Click Here for locations</a>
-                                </div>
-                                <div class="col">
-                                    <h3>Healers Members</h3>
-                                    <div id="heal"></div>
-                                </div>
-                            </div>
-                        
-                            <div class="col-sm-12 col-md-auto col-lg role-descrp">
-                                <h2>DPS</h2>
-                                <p class="middle">DPS are those character which main mission is to deal damage to a target. DPS can also be: Range or Melee (close combat)</p>
-                                <div class="container">
-                                    <a href="#map" class="buttonrl" id="dps" title="Guild DPS locations">Click Here for locations</a>
-                                </div>
-                                <div class="col">
-                                    <h3>DPS Members</h3>
-                                    <div id="dmg"></div>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-
-<!-- Google Map API-->
-				<div id="map"></div>
+                
 			</div>
 			<div class="col-xl-2 gradient-left"></div>
 		</div>
@@ -129,6 +103,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASc8sMqeWZ3ltTmgSZoj1R4ACMRanLnjk&callback=initMap"></script>
-<script src="assets/js/role.js"></script>
+<script src="assets/js/roster.js"></script>
 </body>
 </html>
