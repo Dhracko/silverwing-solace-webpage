@@ -44,18 +44,17 @@ function newFunction() {
         data.forEach(function (item) {
             
             Object.keys(item).forEach(function (key) {
-          
+                obj = item[key];
                 if (key == "character") {
-                var rowData = item[key].name;
-                dataRow.push(`<tr><td>${rowData}</td></tr>`);
+                var rowDataName = obj.name;
+                var rowDataLevel = obj.level;
+                dataRow.push(`<tr><td>${rowDataName}</td><td>${rowDataLevel}</td></tr>`);
                 console.log(dataRow);
                 }    
             });
               
             el.innerHTML = `<table>${dataRow}</table>`.replace(/,/g, "");
         });
-        tableRow.push(`<tr>${dataRow}</tr>`);
-                console.log(tableRow);
     }
 }
    
