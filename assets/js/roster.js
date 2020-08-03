@@ -7,7 +7,7 @@ var myInit = { method: 'GET',
                 cache: 'default' };
 
 
-var myRequest = new Request("assets/js/members.json", myInit);
+var myRequest = new Request("assets/js/roster.json", myInit);
 
 // Fetch the data from the JSON file
 fetch(myRequest)
@@ -24,7 +24,7 @@ function makeTable() {
         var el = document.getElementById("data");
         el.innerHTML = "";
         data = data.members;
-
+// Sort out the data by members rank before it get send to the table
         data.sort((a, b) => {
             var keyA = a.rank;
             var keyB = b.rank;
@@ -32,9 +32,8 @@ function makeTable() {
             if (keyA > keyB) return 1;
             return 0;
         });
-
+// Create a table 
         var dataRow = [];
-        var tableRow = [];
         console.log(data);
         data.forEach(function (item) {
 
@@ -42,10 +41,13 @@ function makeTable() {
             Object.keys(item).forEach(function (key) {
 
                  var obj = item[key];
+                 var rowDataRank = item.rank;
                 if (key == "character") {
+                    
                     var rowDataName = obj.name;
                     var rowDataLevel = obj.level;
-                    dataRow.push(`<tr><td>${rowDataName}</td><td>${rowDataLevel}</td></tr>`);
+                    var rowDataRole = obj.playable_class.id;
+                    dataRow.push(`<tr><td>${rowDataName}</td><td>${rowDataLevel}</td><td>${rowDataRole}</td><td>${rowDataRank}</td></tr>`);
                 }
             });
 
