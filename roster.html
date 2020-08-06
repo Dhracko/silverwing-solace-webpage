@@ -16,7 +16,12 @@
         <div class="row no-gutters">
             <div class="col-lg gradient-right"></div>
             <div class="col-sm-12 col-lg-8">
-                <img class="middle-banner" src="assets/images/banner.png" alt="banner">
+                <picture>
+                        <source media="(min-width: 1200px)" srcset="assets/images/banner_1200.png">
+                        <source media="(min-width: 960px)" srcset="assets/images/banner_960.png">
+                        <source media="(min-width: 768px)" srcset="assets/images/banner_768.png">
+                        <img src="assets/images/banner_576.png" alt="banner" class="middle-banner">
+                </picture>
             </div>
             <div class="col-lg gradient-left"></div>
         </div>
